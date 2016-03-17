@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.pauljadam.styleguideimages.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:mipmap/sym_def_app_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ImageView not focusable by default"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:contentDescription="Green Android Robot Mascot"
+        android:src="@android:mipmap/sym_def_app_icon"
+        android:layout_below="@+id/imageView"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="contentDescription=&quot;Green Android Robot Mascot:"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@android:mipmap/sym_def_app_icon"
+        android:focusable="true"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ImageView set focusable but no contentDescription"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ImageButton has no accessible name by default"
+        android:id="@+id/textView4"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="Add New Robot" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="contentDescription=&quot;Add New Robot&quot;"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/imageButton2"
+        android:layout_toRightOf="@+id/imageButton2"
+        android:layout_toEndOf="@+id/imageButton2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/imageButton2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:drawable/title_bar_tall"
+        android:contentDescription="gray bar" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:src="@android:drawable/title_bar_tall"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_toLeftOf="@+id/textView3"
+        android:layout_toStartOf="@+id/textView3"
+        android:importantForAccessibility="no"
+        android:contentDescription="gray bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Gray bar decorative image with android:importantForAccessibility=&quot;no&quot;"
+        android:id="@+id/textView6"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_toRightOf="@+id/imageButton2"
+        android:layout_toEndOf="@+id/imageButton2" />
+
+</RelativeLayout>
